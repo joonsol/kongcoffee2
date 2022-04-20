@@ -1,25 +1,65 @@
 <template>
   <Header />
+  <router-view></router-view>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+  import Header from './components/Header.vue'
 
-export default {
-  name: 'App',
-  components: {
-    Header
+  export default {
+    name: 'App',
+    components: {
+      Header
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  html,
+  body {
+    font-size: 62.5%;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1.4rem;
+  }
+
+  h1 {}
+
+  #container {
+    text-align: center;
+    margin: 3rem 20px 0;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    background-color: #eee;
+    padding: 1rem 0;
+    color: #808080
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+  h3 {
+    color: gray;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin: 3rem 0 1rem;
+  }
 </style>
