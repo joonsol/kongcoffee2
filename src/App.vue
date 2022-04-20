@@ -1,15 +1,28 @@
 <template>
+  <Banner :BannerState="BannerState" @bannerClose="closeBanner"></Banner>
   <Header />
   <router-view></router-view>
 </template>
 
 <script>
   import Header from './components/Header.vue'
-
+  import Banner from './components/Banner'
   export default {
     name: 'App',
+    data() {
+      return {
+        BannerState: true
+
+      }
+    },
+    methods: {
+      closeBanner() {
+        this.BannerState = false
+      }
+    },
     components: {
-      Header
+      Header,
+      Banner
     }
   }
 </script>
