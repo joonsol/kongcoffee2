@@ -4,24 +4,28 @@
     <div class="in_wrap">
 
       <div v-for="(c,i) in coffees" :key="i" class="content">
-        <h3 @click="modalOpen(i)">{{c.title}}</h3>
-        <img @click="modalOpen(i)" :src="c.image" :alt="c.id">
+        <h3 >{{c.title}}</h3>
+        <img :src="c.image" :alt="c.id">
       </div>
     </div>
-</div>
+ 
+  </div>
 </template>
 <script>
   import coffee from '../assets/coffee.js'
   export default {
     data() {
       return {
-        coffees: coffee
+        coffees: coffee,
       }
-    }
+    },
+    
+
+
   }
-  </script>
+</script>
 <style scoped>
-    #container {
+  #container {
     margin-bottom: 10rem
   }
 
@@ -51,5 +55,4 @@
     background-color: gainsboro;
     margin: 1rem auto
   }
-
 </style>
