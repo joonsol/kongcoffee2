@@ -4,22 +4,34 @@
     <div class="in_wrap">
 
       <div v-for="(c,i) in coffees" :key="i" class="content">
-        <h3 >{{c.title}}</h3>
-        <img :src="c.image" :alt="c.id">
+        <h3 @click="modalOpen">{{c.title}}</h3>
+        <img @click="modalOpen" :src="c.image" :alt="c.id">
       </div>
     </div>
- 
+    <Modal></Modal>
+
   </div>
 </template>
 <script>
   import coffee from '../assets/coffee.js'
+  import Modal from './Modal'
+
   export default {
     data() {
       return {
         coffees: coffee,
       }
     },
-    
+
+    methods: {
+      modalOpen() {
+        this.modal = true
+      }
+    },
+
+    components: {
+      Modal
+    }
 
 
   }
